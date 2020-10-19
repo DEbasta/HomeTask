@@ -15,14 +15,17 @@ import ru.mail.hometask.R;
 public class SecondFragment extends Fragment {
     private final NumberModel model;
 
+
     public SecondFragment(NumberModel model) {
         this.model = model;
     }
+
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

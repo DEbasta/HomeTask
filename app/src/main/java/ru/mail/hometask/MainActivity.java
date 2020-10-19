@@ -10,6 +10,7 @@ import ru.mail.hometask.Model.NumberModel;
 
 public class MainActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
                 .replace(R.id.fragments, new FirstFragment())
                 .commit();
     }
+
 
     public void openFragment(NumberModel model) {
         getSupportFragmentManager()
