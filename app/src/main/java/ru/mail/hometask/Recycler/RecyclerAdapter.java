@@ -10,31 +10,31 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-import ru.mail.hometask.Model.NumberModel;
+import ru.mail.hometask.Data.NumberModel;
 import ru.mail.hometask.R;
 
-public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerHolder>{
+public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerHolder> {
 
     private final List<NumberModel> mData;
     private final ActionListener clicked;
 
-    public RecyclerAdapter(List<NumberModel> data,ActionListener clicked){
-        this.mData=data;
-        this.clicked=clicked;
+    public RecyclerAdapter(List<NumberModel> data, ActionListener clicked) {
+        this.mData = data;
+        this.clicked = clicked;
     }
 
 
     @NonNull
     @Override
     public RecyclerHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(viewType,parent,false);
-        return new RecyclerHolder(view,  clicked);
+        View view = LayoutInflater.from(parent.getContext()).inflate(viewType, parent, false);
+        return new RecyclerHolder(view, clicked);
     }
 
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerHolder holder, int position) {
-        NumberModel model =mData.get(position);
+        NumberModel model = mData.get(position);
         holder.getView().setText(model.getmTitle());
         holder.getView().setTextColor(model.getmColor());
         holder.onBind(model);

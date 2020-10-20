@@ -6,28 +6,31 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import ru.mail.hometask.Fragments.FirstFragment;
 import ru.mail.hometask.Fragments.SecondFragment;
-import ru.mail.hometask.Model.NumberModel;
+import ru.mail.hometask.Data.NumberModel;
+import ru.mail.hometask.Recycler.RecyclerAdapter;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements RecyclerAdapter.ActionListener {
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.fragments, new FirstFragment())
-                .commit();
+
+        if (getSupportFragmentManager().findFragmentByTag("tag") == null)
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragments, new FirstFragment())
+                    .commit();
     }
 
 
-    public void openFragment(NumberModel model) {
+    @Override
+    public void onItemClick(NumberModel model) {
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.fragments, new SecondFragment(model))
+                .replace(R.id.fragments, new SecondFragment(model), "tag")
                 .addToBackStack(null)
                 .commit();
     }
-
 }
