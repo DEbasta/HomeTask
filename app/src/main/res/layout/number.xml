@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="@dimen/big_space"
+        android:layout_height="@dimen/big_space"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_marginLeft="@dimen/little_space"
+        android:gravity="center_horizontal|center_vertical"
+        android:textSize="@dimen/little_text"
+        tools:text="100" />
+
+
+</FrameLayout>
