@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="field">48dp</dimen>
-    <dimen name="little_text">20sp</dimen>
-    <dimen name="big_text">55sp</dimen>
-    <dimen name="big_space">55dp</dimen>
-    <dimen name="little_space">20sp</dimen>
-</resources>
